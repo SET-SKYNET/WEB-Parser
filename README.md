@@ -25,3 +25,12 @@ python3 app.py --chromedriver chromedriver --deserialize_links_from parsed_links
 ```
 
 5. Enjoy the result, by opening films_data.xlsx
+
+Command line output
+![Command Line Output](CLI_Output.png)
+
+Excell output 1
+![Excell output 1](Excell_part_1.png)
+
+Excell output 2
+![Excell output 2](Excell_part_2.png)
