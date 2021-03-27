@@ -122,7 +122,7 @@ class Parser(object):
         count = 0
         for page_link in links_list:
             # ReInitialize new ChromeDriver session for every loop,
-            # because we kill previouse ChromeDriver session at the and of every loop
+            # because we kill previouse ChromeDriver session at the end of every loop
             self.driver = webdriver.Chrome(self.chromedriver, desired_capabilities=self.capa)
 
             # Open page
