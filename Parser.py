@@ -109,7 +109,7 @@ class Parser(object):
         self.capa = DesiredCapabilities.CHROME
         self.capa["pageLoadStrategy"] = "none"
 
-        # Open XLS file to write data into it,
+        # Open XLSX file to write data into it,
         # set worksheet name,
         # enable text wrapping and
         # set text align parameters
@@ -161,13 +161,13 @@ class Parser(object):
 
             # Write bold column titles to the XML file if it is 1st loop
             if count == 0:
-                print("Writing bold column titles to XML file")
-                # Write bold column titles to the XML file
+                print("Writing bold column titles to file.xlsx")
+                # Write bold column titles to the file.xlsx
                 for col_num, data in enumerate(titles):
                     self.worksheet.write(0, col_num, str(data), self.workbook.add_format({'bold': True}))
 
             # Print parsed data to the CLI
-            print(f"Writing data to XML file about film #{count+1}:")
+            print(f"Writing data to file.xlsx about film #{count+1}:")
             print(titles[0], film_name_ua)
             print(titles[1], page_link)
             print(titles[2], film)
@@ -199,7 +199,7 @@ class Parser(object):
                 sound_language,
                 screenshots]
 
-            # Write data to the XML file row-by-row
+            # Write data to the file.xlsx row-by-row
             for col_num, data in enumerate(all_film_data):
                 if col_num == 3:
                     self.worksheet.set_column(col_num, col_num, 100)
@@ -208,7 +208,7 @@ class Parser(object):
                 else:
                     self.worksheet.set_column(col_num, col_num, 25)
 
-                # Write formatted data to XLSX file row-by-row
+                # Write formatted data to file.xlsx row-by-row
                 self.worksheet.write(count+1, col_num, str(data), self.data_format)
 
             # Loops increment
