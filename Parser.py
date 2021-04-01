@@ -82,6 +82,7 @@ class Parser(object):
             # Return element's value
             return element
 
+    @property
     def deserialize_links_from_txt(self):
         """
         This method deserializes all links from file.txt

@@ -31,7 +31,7 @@ if __name__ == '__main__':
     )
 
     # Get links from file.txt
-    links = parser.deserialize_links_from_txt()
+    links = parser.deserialize_links_from_txt
 
     # Run application
     parser.parse_data(links)
