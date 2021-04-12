@@ -19,7 +19,7 @@ if __name__ == '__main__':
         '--serialize_data_to',
         type=str,
         required=True,
-        help='File.xslx where parsed data will be saved to')
+        help='File.xlsx where parsed data will be saved to')
 
     args = parser.parse_args()
 
